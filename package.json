@@ -1,0 +1,36 @@
+{
+  "name": "column-types-integration-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "prisma generate",
+    "test:run": "tsx src/test.ts",
+    "test:mock": "tsx src/mock-test.ts",
+    "test:all": "pnpm test:mock && pnpm test:run"
+  },
+  "dependencies": {
+    "@prisma/client": "latest",
+    "@prisma/client-runtime-utils": "latest",
+    "@prisma/adapter-better-sqlite3": "latest",
+    "@prisma/driver-adapter-utils": "latest",
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "prisma": "latest",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0",
+    "@types/better-sqlite3": "^7.6.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@prisma/client": "link:../prisma/packages/client",
+      "@prisma/client-engine-runtime": "link:../prisma/packages/client-engine-runtime",
+      "@prisma/client-runtime-utils": "link:../prisma/packages/client-runtime-utils",
+      "@prisma/driver-adapter-utils": "link:../prisma/packages/driver-adapter-utils",
+      "@prisma/adapter-better-sqlite3": "link:../prisma/packages/adapter-better-sqlite3",
+      "prisma": "link:../prisma/packages/cli"
+    }
+  }
+}
