@@ -31,21 +31,21 @@ prisma-column-types/
 ```bash
 mkdir prisma-column-types && cd prisma-column-types
 
-# Clone your prisma fork (with columnTypes TypeScript changes)
-git clone https://github.com/YOUR_USERNAME/prisma.git
+# Clone prisma fork (with columnTypes TypeScript changes)
+git clone https://github.com/mmvsk/prisma.git
 cd prisma
 git checkout feature/28891-sqlquery-column-types
 pnpm install
 cd ..
 
-# Clone your prisma-engines fork (with column_types Rust changes)
-git clone https://github.com/YOUR_USERNAME/prisma-engines.git
+# Clone prisma-engines fork (with column_types Rust changes)
+git clone https://github.com/mmvsk/prisma-engines.git
 cd prisma-engines
 git checkout feature/prisma-28891-dbquery-column-types
 cd ..
 
-# Clone or create the integration test
-git clone https://github.com/YOUR_USERNAME/prisma-column-types-integration-test.git integration-test
+# Create the integration test directory
+mkdir integration-test
 cd integration-test
 ```
 
@@ -252,5 +252,5 @@ cargo install wasm-bindgen-cli --version X.X.X
 
 ## Related PRs
 
-- prisma/prisma#XXXXX - TypeScript columnTypes plumbing
-- prisma/prisma-engines#XXXXX - Rust column_types implementation
+- [prisma/prisma](https://github.com/mmvsk/prisma/tree/feature/28891-sqlquery-column-types) - TypeScript columnTypes plumbing
+- [prisma/prisma-engines](https://github.com/mmvsk/prisma-engines/tree/feature/prisma-28891-dbquery-column-types) - Rust column_types implementation
