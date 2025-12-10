@@ -42,14 +42,16 @@ This test verifies the end-to-end flow:
 ### 1. Clone the repository with submodules
 
 ```bash
-git clone --recurse-submodules https://github.com/mmvsk/prisma-adapter-column-types-integration-test.git
+git clone --recurse-submodules --shallow-submodules https://github.com/mmvsk/prisma-adapter-column-types-integration-test.git
 cd prisma-adapter-column-types-integration-test
 ```
+
+The `--shallow-submodules` flag uses `--depth 1` for submodules, which is much faster since prisma and prisma-engines have large histories.
 
 Or if you already cloned without submodules:
 
 ```bash
-git submodule update --init --recursive
+git submodule update --init --depth 1
 ```
 
 ### 2. Install Rust WASM toolchain
