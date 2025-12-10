@@ -1,0 +1,8 @@
+[submodule "prisma"]
+	path = prisma
+	url = https://github.com/mmvsk/prisma.git
+	branch = feature/28891-adapter-column-types
+[submodule "prisma-engines"]
+	path = prisma-engines
+	url = https://github.com/mmvsk/prisma-engines.git
+	branch = feature/prisma-28891-adapter-column-types

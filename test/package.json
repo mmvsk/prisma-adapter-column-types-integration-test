@@ -32,5 +32,6 @@
       "@prisma/adapter-better-sqlite3": "link:../prisma/packages/adapter-better-sqlite3",
       "prisma": "link:../prisma/packages/cli"
     }
-  }
+  },
+  "packageManager": "pnpm@9.15.1"
 }

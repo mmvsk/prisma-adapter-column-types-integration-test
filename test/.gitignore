@@ -1,1 +1,18 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# Prisma generated
+.prisma/
+
+# SQLite database files
+*.db
+*.db-journal
+
+# Logs
+*.log
+
+# Lock file (regenerated on install)
+pnpm-lock.yaml
